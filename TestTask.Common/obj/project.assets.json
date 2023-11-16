@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "MaybeMonad/1.0.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MaybeMonad.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MaybeMonad.dll": {}
+        }
+      },
+      "ResultMonad/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaybeMonad": "1.0.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ResultMonad.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ResultMonad.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MaybeMonad/1.0.1.1": {
+      "sha512": "7N+UAyHPlcFd8Xw8ZwCot5GylynDcuVaDNvd258hc99lPjFMFJ2SZhyE7xNrLgKSmSYGX5gtvFCpLW/MrnqV7Q==",
+      "type": "package",
+      "path": "maybemonad/1.0.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MaybeMonad.dll",
+        "maybemonad.1.0.1.1.nupkg.sha512",
+        "maybemonad.nuspec"
+      ]
+    },
+    "ResultMonad/1.0.1": {
+      "sha512": "FUPXv68V56E9bd/isJpmaYSh6n8QMuiMoL9T2JqZ4cfzmVd3zQ0lxhCiNR6zY/zxo+ZzKOwN7vnxK/r3z1BKxQ==",
+      "type": "package",
+      "path": "resultmonad/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/ResultMonad.dll",
+        "resultmonad.1.0.1.nupkg.sha512",
+        "resultmonad.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "ResultMonad >= 1.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\user\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Proga\\AspNetCore\\TestTask\\TestTask.Common\\TestTask.Common.csproj",
+      "projectName": "TestTask.Common",
+      "projectPath": "D:\\Proga\\AspNetCore\\TestTask\\TestTask.Common\\TestTask.Common.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Proga\\AspNetCore\\TestTask\\TestTask.Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "ResultMonad": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

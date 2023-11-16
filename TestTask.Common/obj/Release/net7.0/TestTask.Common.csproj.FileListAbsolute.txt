@@ -1,0 +1,12 @@
+D:\Proga\AspNetCore\TestTask\TestTask.Common\bin\Release\net7.0\TestTask.Common.deps.json
+D:\Proga\AspNetCore\TestTask\TestTask.Common\bin\Release\net7.0\TestTask.Common.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Common\bin\Release\net7.0\TestTask.Common.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.csproj.AssemblyReference.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.AssemblyInfoInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.AssemblyInfo.cs
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.csproj.CoreCompileInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\refint\TestTask.Common.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\TestTask.Common.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Common\obj\Release\net7.0\ref\TestTask.Common.dll

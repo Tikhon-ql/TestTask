@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zBBVe3NJHd18ddh/EbvDYTiAzweGkDxozcNV4WPeSs2GaP3XdXKYgaFpjXBJRHR7FZT7D52R9B1YAd1SBRTHxQ==",
+  "success": true,
+  "projectFilePath": "D:\\Proga\\AspNetCore\\TestTask\\TestTask.Common\\TestTask.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\maybemonad\\1.0.1.1\\maybemonad.1.0.1.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\resultmonad\\1.0.1\\resultmonad.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

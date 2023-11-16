@@ -1,0 +1,17 @@
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.DataProvider.deps.json
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.DataProvider.runtimeconfig.json
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.DataProvider.dll
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.DataProvider.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.Common.dll
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\bin\Release\net7.0\TestTask.Common.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.csproj.AssemblyReference.cache
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.AssemblyInfoInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.AssemblyInfo.cs
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.csproj.CoreCompileInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.csproj.CopyComplete
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.dll
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\refint\TestTask.DataProvider.dll
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\TestTask.DataProvider.genruntimeconfig.cache
+D:\Proga\AspNetCore\TestTask\TestTask.DataProvider\obj\Release\net7.0\ref\TestTask.DataProvider.dll

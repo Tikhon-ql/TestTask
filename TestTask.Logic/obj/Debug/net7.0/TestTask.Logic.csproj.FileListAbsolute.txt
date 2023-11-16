@@ -1,0 +1,17 @@
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.Logic.deps.json
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.Logic.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.Logic.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.Common.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.DataProvider.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.Common.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\bin\Debug\net7.0\TestTask.DataProvider.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.csproj.AssemblyReference.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.AssemblyInfoInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.AssemblyInfo.cs
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.csproj.CoreCompileInputs.cache
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.csproj.CopyComplete
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\refint\TestTask.Logic.dll
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\TestTask.Logic.pdb
+D:\Proga\AspNetCore\TestTask\TestTask.Logic\obj\Debug\net7.0\ref\TestTask.Logic.dll

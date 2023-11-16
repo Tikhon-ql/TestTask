@@ -1,0 +1,213 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (Model.Error != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.Error
+    </div>
+    Model.Error = null;
+}
+
+<div class="text-center w-100">
+    <div class="content">
+        <a id="addButton" class="btn btn-danger m-5 justify-content-center">Add contact</a>
+        <table class="table col-md-12 justify-content-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile phone</th>
+                    <th scope="col">Job</th>
+                    <th scope="col">Birthdate</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model.Contacts)
+                {
+                    <tr ondblclick="editData(this)">
+                        <td style="display:none">@contact.Id</td>
+                        <td>@contact.Name</td>
+                        <td>@contact.MobilePhone</td>
+                        <td>@(contact.JobTitle == null ? "Unknown" : contact.JobTitle)</td>
+                        <td>@(contact.BirthDate == null ? "Unknown" : contact.BirthDate.Value.ToString("yyyy-MM-dd"))</td>
+                        <td>
+                            <form method="post">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')" asp-page-handler="DeleteContact" asp-route-id="@contact.Id">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @if (Math.Ceiling(Model.TotalContactsCount / 5.0) > 1)
+        {
+            <nav style="margin:0 auto; width:100%" class="mt-5">
+                <ul class="pagination pagination-sm" style="margin:0 auto;justify-content:center">
+                    @for (int i = 0; i < Math.Ceiling(Model.TotalContactsCount / 5.0); i++)
+                    {
+                        <li class="page-item" style="justify-content:center"><form method="post" asp-route-currentPageSent="@i" asp-page-handler="PagedList"><button class="page-link" type="submit">@(i + 1)</button></form></li>
+                    }
+                </ul>
+            </nav>
+        }
+    </div>
+
+
+    @*--Adding modal--*@
+    <div class="modal fade" id="aModal" tabindex="-1" role="dialog" aria-labelledby="aModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="aModalLabel">Add Contact</h4>
+                    <p id="addingDemo"></p>
+                </div>
+                <div class="modal-body">
+                    <form id="addingForm" method="post" asp-page-handler="AddContact">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" required class="form-control" id="addingName" name="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobilePhone">Mobile phone</label>
+                            <input type="text" required class="form-control" id="addingMobilePhone" name="mobilePhone" placeholder="Enter phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job title</label>
+                            <input type="text" class="form-control" id="addingJobTitle" name="jobTitle">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" class="form-control" id="addingBirthdate" name="birthdate">
+                        </div>
+                        <button type="submit" id="addingSubmitButton" class="btn btn-danger m-3">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeButton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*--Adding modal--*@
+
+    @*--Editing modal--*@
+    <div class="modal fade" id="eModal" tabindex="-1" role="dialog" aria-labelledby="eModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="eModalLabel">Edit Contact</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" method="post" asp-page-handler="EditContact">
+                        <input style="visibility:hidden" type="text" id="id" name="id" />
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" required class="form-control" id="editingName" name="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobilePhone">Mobile phone</label>
+                            <input type="tel" required class="form-control" id="editingMobilePhone" name="mobilePhone" placeholder="Enter phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job title</label>
+                            <input type="text" class="form-control" id="editingJobTitle" name="jobTitle">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" class="form-control" id="editingBirthdate" name="birthdate">
+                        </div>
+                        <button type="submit" id="editingSubmitButton" class="btn btn-danger m-3">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="ecloseButton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*--Editing modal--*@
+
+    <script>
+        document.getElementById("addButton").onclick = () => {
+            $("#aModal").modal('show');
+        }
+        document.getElementById("closeButton").onclick = () => {
+            $("#aModal").modal('hide');
+        }
+
+        let addingSubmitButton = document.getElementById("addingSubmitButton");
+        let editingSubmitButton = document.getElementById("editingSubmitButton");
+
+        function mobilePhoneValidation(e) {
+            const pattern = /^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$/;
+            if (!pattern.test(e.target.value)) {
+                addingSubmitButton.disabled = true;
+                editingSubmitButton.disabled = true;
+                e.target.style.borderColor = "red";
+            } else {
+                addingSubmitButton.disabled = false;
+                editingSubmitButton.disabled = false;
+                e.target.style.borderColor = "black";
+            }
+        }
+
+        function birthdateValidation(e) {
+            let date = new Date(e.target.value);
+            let actual = new Date();
+            let isFuture = Date.parse(date) > Date.now();
+            let isPast = date.getFullYear() < actual.getFullYear() - 100;
+            if (isFuture || isPast) {
+                addingSubmitButton.disabled = true;
+                editingSubmitButton.disabled = true;
+                e.target.style.borderColor = "red";
+            } else {
+                addingSubmitButton.disabled = false;
+                editingSubmitButton.disabled = false;
+                e.target.style.borderColor = "black";
+            }
+        }
+
+        document.getElementById("addingMobilePhone").oninput = (e) => {
+            mobilePhoneValidation(e);
+        }
+        document.getElementById("editingMobilePhone").oninput = (e) => {
+            mobilePhoneValidation(e);
+        }
+
+
+        document.getElementById("addingBirthdate").onchange = (e) => {
+            birthdateValidation(e);
+        }
+
+        document.getElementById("editingBirthdate").onchange = (e) => {
+            birthdateValidation(e);
+        }
+
+        function editData(e) {
+            let row = e;
+            let idCell = row.cells[0].textContent;
+            let nameCell = row.cells[1].textContent;
+            let mobilePhoneCell = row.cells[2].textContent;
+            let jobCell = row.cells[3].textContent;
+            let birthdateCell = row.cells[4].textContent;
+
+            editForm[0].value = idCell;
+            editForm[1].value = nameCell;
+            editForm[2].value = mobilePhoneCell;
+            editForm[3].value = jobCell == "Unknown" ? "" : jobCell
+            editForm[4].value = birthdateCell;
+
+            $("#eModal").modal('show');
+        }
+        document.getElementById("ecloseButton").onclick = () => {
+            $("#eModal").modal('hide');
+        }
+    </script>
+</div>

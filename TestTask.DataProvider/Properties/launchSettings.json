@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TestTask.DataProvider": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ConnectionStrings:ContactsDb": "\"Server=(localdb)\\\\mssqllocaldb;Database=ContactsDb;Trusted_connection=True\""
+      }
+    }
+  }
+}

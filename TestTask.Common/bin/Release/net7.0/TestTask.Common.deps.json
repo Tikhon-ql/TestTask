@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TestTask.Common/1.0.0": {
+        "dependencies": {
+          "ResultMonad": "1.0.1"
+        },
+        "runtime": {
+          "TestTask.Common.dll": {}
+        }
+      },
+      "MaybeMonad/1.0.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/MaybeMonad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ResultMonad/1.0.1": {
+        "dependencies": {
+          "MaybeMonad": "1.0.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ResultMonad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestTask.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaybeMonad/1.0.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7N+UAyHPlcFd8Xw8ZwCot5GylynDcuVaDNvd258hc99lPjFMFJ2SZhyE7xNrLgKSmSYGX5gtvFCpLW/MrnqV7Q==",
+      "path": "maybemonad/1.0.1.1",
+      "hashPath": "maybemonad.1.0.1.1.nupkg.sha512"
+    },
+    "ResultMonad/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FUPXv68V56E9bd/isJpmaYSh6n8QMuiMoL9T2JqZ4cfzmVd3zQ0lxhCiNR6zY/zxo+ZzKOwN7vnxK/r3z1BKxQ==",
+      "path": "resultmonad/1.0.1",
+      "hashPath": "resultmonad.1.0.1.nupkg.sha512"
+    }
+  }
+}
